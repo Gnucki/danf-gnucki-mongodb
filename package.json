@@ -1,0 +1,37 @@
+{
+    "name": "danf-gnucki-mongodb",
+    "description": "A danf module for mongoDB",
+    "version": "0.0.0",
+    "author": {
+        "name": "Thomas Prelot",
+        "email": "tprelot@gmail.com",
+        "url": "https://github.com/Gnucki"
+    },
+    "contributors": [
+        {
+            "name": "Thomas Prelot",
+            "email": "tprelot@gmail.com",
+            "url": "https://github.com/Gnucki"
+        }
+    ],
+    "dependencies": {
+        "danf": "^0.3",
+        "mongodb": "^2.1"
+    },
+    "devDependencies": {
+        "mocha": "^2.2",
+        "supertest": "^1.0"
+    },
+    "keywords": [
+        "danf",
+        "module",
+        "mongodb"
+    ],
+    "repository": "git://github.com/gnucki/danf-gnucki-mongodb",
+    "scripts": {
+        "test": "make test"
+    },
+    "engines": {
+        "node": "*"
+    }
+}
