@@ -11,7 +11,8 @@ module.exports = {
         properties: {
             name: '@_@',
             connectionUrl: '@url@',
-            options: '@options@'
+            connectionOptions: '@options@',
+            mongodb: '#mongodb#'
         },
         induced: {
             collection: {
@@ -26,14 +27,17 @@ module.exports = {
     collection: {
         collections: ['collection'],
         class: 'collection',
+        properties: {
+            mongodb: '#mongodb#'
+        },
         factories: {
             db: {
                 declinations: '!collections!',
                 properties: {
                     name: '@name@',
                     document: '@document@',
-                    creationOptions: '@creationOptions@',
-                    indexes: '@indexes@',
+                    options: '@options@',
+                    indexes: '@indexes@'
                 }
             }
         }

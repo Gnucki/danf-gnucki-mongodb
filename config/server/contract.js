@@ -32,7 +32,7 @@ module.exports = {
                         type: 'object',
                         default: null
                     },
-                    creationOptions: {
+                    options: {
                         type: 'object',
                         default: {}
                     },

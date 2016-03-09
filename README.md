@@ -27,7 +27,7 @@ Use
 gnuckiMongodb: {
     // Define the list of connections.
     connections: {
-        // Define a connection of name "forum".
+        // Define a connection of name "forum" on the database "forum".
         forum: {
             // Define the mongodb connection URL and additional options.
             // (https://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#the-url-connection-format)
@@ -80,9 +80,9 @@ gnuckiMongodb: {
                 posts: {}
             }
         },
-        // Define a connection of name "user".
+        // Define a connection of name "user" on the database "users".
         user: {
-            url: 'mongodb://127.0.0.1:27017/user',
+            url: 'mongodb://127.0.0.1:27017/users',
             collections: {
                 users: {
                     // Override the default collection name of "users"
@@ -97,9 +97,6 @@ gnuckiMongodb: {
                             type: 'string',
                             required: true
                         }
-                    },
-                    options: {
-                        foo: 'bar'
                     }
                 },
                 connections: {
@@ -117,9 +114,9 @@ gnuckiMongodb: {
                             required: true
                         }
                     },
-                    // Define some options for the creation of the collection
-                    // (used for capped collections for instance).
-                    creationOptions: {
+                    // Define some options for the creation and fetching
+                    // of the collection (used for capped collections for instance).
+                    options: {
                         capped: true,
                         size: 1000000,
                         max: 1000,
@@ -215,11 +212,11 @@ replaceOne
 updateMany
 updateOne
 
--> open connections/create collections/create indexes: initialization __asyncFlow
--> check document format: insert + update $set
--> override the default collection: 'gnuckiMongodb:db.forum.collection.topics': {parent: 'gnuckiMongodb:db.forum.collection.proxy', properties: { collection: '#gnuckiMongodb:db.forum.collection.topics.default#'}} // 'gnuckiMongodb:db.forum.collection.topics': {alias: gnuckiMongodb:db.forum.collection.topics.default}
--> type document: find cursor set __implement on objetcs of "free" interfaces
--> handle mongoId and references: custom dataResolver with a dataInterpreter decoding types "gnuckiMongodb.document.."
--> clean useless files and documentation
--> make tests
--> npm publish
+- open connections/create collections/create indexes: initialization __asyncFlow
+- check document format: insert + update $set
+- override the default collection: 'gnuckiMongodb:db.forum.collection.topics': {parent: 'gnuckiMongodb:db.forum.collection.proxy', properties: { collection: '#gnuckiMongodb:db.forum.collection.topics.default#'}} // 'gnuckiMongodb:db.forum.collection.topics': {alias: gnuckiMongodb:db.forum.collection.topics.default}
+- type document: find cursor set __implement on objetcs of "free" interfaces
+- handle mongoId and references: custom dataResolver with a dataInterpreter decoding types "gnuckiMongodb.document.."
+- clean useless files and documentation
+- make tests
+- npm publish
