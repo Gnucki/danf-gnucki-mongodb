@@ -11,5 +11,6 @@ test-app:
 		--reporter $(REPORTER) \
 		--timeout 5000 \
 		--recursive \
+		--delay \
 		$(MOCHA_OPTS) \
 		test/unit/*

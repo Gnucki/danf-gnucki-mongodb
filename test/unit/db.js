@@ -127,9 +127,11 @@ TestHelper.use(configuration, context, function(testHelper) {
         it('method "..." should ...', function() {
             var db = testHelper.getService('db.forum');
 
-            db.listCollections().toArray(function(err, items) {
+            db.driver.listCollections().toArray(function(err, items) {
                 console.log(items);
             });
         })
     })
+
+    run();
 })
