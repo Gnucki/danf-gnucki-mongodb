@@ -190,33 +190,13 @@ module.exports = {
 Todo
 ----
 
-aggregate
-bulkWrite
-count
-deleteMany
-deleteOne
-distinct
-find
-findOne
-findOneAndDelete
-findOneAndReplace
-findOneAndUpdate
-geoHaystackSearch
-geoNear
-group
-insertMany
-insertOne
-mapReduce
-parallelCollectionScan
-replaceOne
-updateMany
-updateOne
-
-- open connections/create collections/create indexes: initialization __asyncFlow
+- create indexes
 - check document format: insert + update $set
 - override the default collection: 'gnuckiMongodb:db.forum.collection.topics': {parent: 'gnuckiMongodb:db.forum.collection.proxy', properties: { collection: '#gnuckiMongodb:db.forum.collection.topics.default#'}} // 'gnuckiMongodb:db.forum.collection.topics': {alias: gnuckiMongodb:db.forum.collection.topics.default}
 - type document: find cursor set __implement on objetcs of "free" interfaces
 - handle mongoId and references: custom dataResolver with a dataInterpreter decoding types "gnuckiMongodb.document.."
+- handle collection and db events
+- handle stream cursor
 - clean useless files and documentation
 - make tests
 - npm publish
