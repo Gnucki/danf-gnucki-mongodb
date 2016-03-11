@@ -132,6 +132,4 @@ TestHelper.use(configuration, context, function(testHelper) {
             });
         })
     })
-
-    run();
 })
