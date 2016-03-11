@@ -91,14 +91,170 @@ module.exports = {
     },
     collection: {
         methods: {
+            /**
+             * Create a collection.
+             */
             create: {},
-            fetch: {}
+            /**
+             * Fetch a collection.
+             */
+            fetch: {},
+            // Proxy on driver interface.
+            // Take a look at http://mongodb.github.io/node-mongodb-native/
+            // for latest API documentation.
+            aggregate: {
+                arguments: ['pipeline/object', 'object|null/options']
+            },
+            bulkWrite: {
+                arguments: ['operations/mixed_object_array', 'object|null/options']
+            },
+            count: {
+                arguments: ['object/query', 'object|null/options']
+            },
+            createIndex: {
+                arguments: ['string|object/fieldOrSpec', 'object|null/options']
+            },
+            createIndexes: {
+                arguments: ['mixed_object_array/indexSpecs']
+            },
+            deleteMany: {
+                arguments: ['object/filter', 'object|null/options']
+            },
+            deleteOne: {
+                arguments: ['object/filter', 'object|null/options']
+            },
+            distinct: {
+                arguments: ['string/key', 'object/query', 'object|null/options']
+            },
+            drop: {},
+            dropIndex: {
+                arguments: ['string/indexName', 'object|null/options']
+            },
+            dropIndexes: {},
+            find: {
+                arguments: ['object/query'],
+                returns: 'object'
+            },
+            findOne: {
+                arguments: ['object/query', 'object|null/options']
+            },
+            findOneAndDelete: {
+                arguments: ['object/filter', 'object|null/options']
+            },
+            findOneAndReplace: {
+                arguments: ['object/filter', 'object/replacement', 'object|null/options']
+            },
+            findOneAndUpdate: {
+                arguments: ['object/filter', 'object/update', 'object|null/options']
+            },
+            geoHaystackSearch: {
+                arguments: ['number/x', 'number/y', 'object|null/options']
+            },
+            geoNear: {
+                arguments: ['number/x', 'number/y', 'object|null/options']
+            },
+            getIndexes: {
+                arguments: ['string/name', 'object|null/options']
+            },
+            getOptions: {
+                arguments: []
+            },
+            group: {
+                arguments: [
+                    'object|array|function/keys',
+                    'object/condition',
+                    'object/initial',
+                    'function/reduce',
+                    'function/finalize',
+                    'boolean/command',
+                    'object|null/options'
+                ]
+            },
+            indexExists: {
+                arguments: ['string|string_array/indexes']
+            },
+            indexInformation: {
+                arguments: ['object|null/options']
+            },
+            initializeOrderedBulkOp: {
+                arguments: ['string/name', 'object|null/options'],
+                returns: 'object'
+            },
+            initializeUnorderedBulkOp: {
+                arguments: ['string/name', 'object|null/options'],
+                returns: 'object'
+            },
+            insertMany: {
+                arguments: ['mixed_object_array/docs', 'object|null/options']
+            },
+            insertOne: {
+                arguments: ['object/doc', 'object|null/options']
+            },
+            isCapped: {},
+            listIndexes: {
+                arguments: ['object|null/options'],
+                returns: 'object'
+            },
+            mapReduce: {
+                arguments: ['string|function/map', 'string|function/reduce', 'object|null/options']
+            },
+            parallelCollectionScan: {
+                arguments: ['object|null/options']
+            },
+            reIndex: {},
+            replaceOne: {
+                arguments: ['object/filter', 'object/doc', 'object|null/options']
+            },
+            stats: {
+                arguments: ['object|null/options']
+            },
+            updateMany: {
+                arguments: ['object/filter', 'object/update', 'object|null/options']
+            },
+            updateOne: {
+                arguments: ['object/filter', 'object/update', 'object|null/options']
+            }
         },
         getters: {
+            /**
+             * The identifier name of the database.
+             *
+             * @var string
+             */
+            id: 'string',
+            /**
+             * The name of the database.
+             *
+             * @var string
+             */
             name: 'string',
-            db: 'db'
+            /**
+             * The related driver collection object.
+             *
+             * @var string
+             */
+            driver: 'object',
+            /**
+             * The related db object.
+             *
+             * @var string
+             */
+            db: 'db',
+            // Proxy on driver interface.
+            // Take a look at http://mongodb.github.io/node-mongodb-native/
+            // for latest API documentation.
+            collectionName: 'string',
+            namespace: 'string',
+            writeConcern: 'object',
+            readConcern: 'object',
+            hint: 'object'
         },
         setters: {
+            /**
+             * The related db object.
+             *
+             * @var string
+             */
             db: 'db'
         }
     }
