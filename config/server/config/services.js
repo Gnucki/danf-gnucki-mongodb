@@ -9,7 +9,7 @@ module.exports = {
         class: 'db',
         declinations: '$connections$',
         properties: {
-            name: '@_@',
+            id: '@_@',
             connectionUrl: '@url@',
             connectionOptions: '@options@',
             mongodb: '#mongodb#'
@@ -34,6 +34,7 @@ module.exports = {
             db: {
                 declinations: '!collections!',
                 properties: {
+                    id: '@_@',
                     name: '@name@',
                     document: '@document@',
                     options: '@options@',
