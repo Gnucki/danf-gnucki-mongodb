@@ -143,7 +143,7 @@ module.exports = {
     consultTopic: {
         stream: {
             topicId: {
-                type: 'string',
+                type: 'object|string',
                 required: true
             }
         },
@@ -166,8 +166,8 @@ module.exports = {
                 method: 'updateOne',
                 arguments: [
                     {_id: '@topicId@'},
-                    {$inc: 1}
-                ],
+                    {$inc: {views: 1}}
+                ]
             },
             // Find the related forum after topic retrieving
             // (different orders = sequential execution).
