@@ -1,7 +1,7 @@
 {
     "name": "danf-gnucki-mongodb",
     "description": "A danf module for mongoDB",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "author": {
         "name": "Thomas Prelot",
         "email": "tprelot@gmail.com",
@@ -15,7 +15,7 @@
         }
     ],
     "dependencies": {
-        "danf": "^0.3",
+        "danf": "^0.4",
         "mongodb": "^2.1"
     },
     "devDependencies": {
