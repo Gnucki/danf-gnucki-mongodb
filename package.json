@@ -27,6 +27,7 @@
         "module",
         "mongodb"
     ],
+    "license": "MIT",
     "repository": "git://github.com/gnucki/danf-gnucki-mongodb",
     "scripts": {
         "test": "make test"
