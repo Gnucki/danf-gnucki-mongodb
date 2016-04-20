@@ -7,3 +7,5 @@ node_js:
   - '4.2'
   - '5.0'
 script: 'make test'
+services:
+  - mongodb
