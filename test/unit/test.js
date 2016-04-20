@@ -212,7 +212,7 @@ TestHelper.use(configuration, context, function(testHelper) {
                     var connectionCollection = utils.clone(collections.connections);
 
                     delete connectionCollection.create;
-                    assert.deepEqual(collections.connections, cappedOptions);
+                    assert.deepEqual(connectionCollection, cappedOptions);
 
                     done();
                 });
