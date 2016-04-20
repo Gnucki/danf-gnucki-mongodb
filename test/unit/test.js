@@ -13,6 +13,7 @@ var cappedOptions = {
     configuration = TestHelper.utils.merge(
         TestHelper.builder.buildSideConfiguration(
             path.join(__dirname, '../..'),
+            {},
             'server'
         ),
         {

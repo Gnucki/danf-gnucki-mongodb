@@ -1,4 +1,4 @@
-MOCHA_OPTS = --check-leaks
+MOCHA_OPTS = --check-leaks --globals async --delay
 REPORTER = dot
 
 check: test
@@ -11,6 +11,5 @@ test-app:
 		--reporter $(REPORTER) \
 		--timeout 5000 \
 		--recursive \
-		--delay \
 		$(MOCHA_OPTS) \
 		test/unit/*
