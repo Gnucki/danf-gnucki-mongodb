@@ -195,7 +195,9 @@ TestHelper.use(configuration, context, function(testHelper) {
             })
 
             it('should imply databases and collections creation', function(done) {
-                var db = testHelper.getService('db.forum');
+                var db = testHelper.getService('db.forum'),
+                    utils = testHelper.getService('danf:utils')
+                ;
 
                 db.driver.listCollections().toArray(function(err, items) {
                     var collections = {};
@@ -206,6 +208,10 @@ TestHelper.use(configuration, context, function(testHelper) {
 
                     assert(collections.topics);
                     assert(collections.authors);
+
+                    var connectionCollection = utils.clone(collections.connections);
+
+                    delete connectionCollection.create;
                     assert.deepEqual(collections.connections, cappedOptions);
 
                     done();
