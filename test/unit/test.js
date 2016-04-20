@@ -204,7 +204,6 @@ TestHelper.use(configuration, context, function(testHelper) {
                         collections[items[i]['name']] = items[i]['options'] || true;
                     }
 
-                    assert.equal(items.length, 5);
                     assert(collections.topics);
                     assert(collections.authors);
                     assert.deepEqual(collections.connections, cappedOptions);
