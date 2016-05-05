@@ -87,6 +87,14 @@ module.exports = {
             native_parser: 'boolean',
             slaveOk: 'boolean',
             writeConcern: 'object'
+        },
+        setters: {
+            /**
+             * The collections.
+             *
+             * @var collection_object
+             */
+            collections: 'collection_object',
         }
     },
     collection: {
