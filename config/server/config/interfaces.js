@@ -77,6 +77,12 @@ module.exports = {
              * @var string
              */
             driver: 'object',
+            /**
+             * The collections.
+             *
+             * @var collection_object
+             */
+            collections: 'collection_object',
             // Proxy on driver interface.
             // Take a look at http://mongodb.github.io/node-mongodb-native/
             // for latest API documentation.
@@ -87,14 +93,6 @@ module.exports = {
             native_parser: 'boolean',
             slaveOk: 'boolean',
             writeConcern: 'object'
-        },
-        setters: {
-            /**
-             * The collections.
-             *
-             * @var collection_object
-             */
-            collections: 'collection_object',
         }
     },
     collection: {
